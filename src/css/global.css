@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* cores do projeto */
+  --green-100: #037a50;
+  --green-200: #025939;
+
+  --blue-100: #dff3e9;
+  --blue-200: #6c757d;
+  --blue-300: #1e3d58;
+
+  --yellow-100: #d4af37;
+
+  --gray-100: #f9f9f9;
+  --gray-200: #d9d9d9;
+
+  /* fontes do projeto */
+  --primary-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+a,
+button {
+  all: unset;
+}
+
+/* classes utilitárias para facilitar o desenvolvimento com css*/
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.grow {
+  flex-grow: 1;
+}
