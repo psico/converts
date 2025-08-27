@@ -1,0 +1,19 @@
+{
+  "name": "converts",
+  "version": "1.0.0",
+  "description": "Projeto web Converts utilizável para converter moedas, acompanhar histórico de conversões, entre outras funcionalidades.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psico/converts.git"
+  },
+  "author": "Alunos e professor João Gabriel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/psico/converts/issues"
+  },
+  "homepage": "https://github.com/psico/converts#readme"
+}
