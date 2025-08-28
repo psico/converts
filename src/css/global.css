@@ -46,7 +46,15 @@ button {
   all: unset;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 /* classes utilitárias para facilitar o desenvolvimento com css*/
+
+/* flexbox */
 .flex {
   display: flex;
 }
@@ -61,6 +69,10 @@ button {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-start {
+  justify-content: start;
 }
 
 .justify-between {
