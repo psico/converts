@@ -1,5 +1,5 @@
 .header {
-  box-shadow: 0px 5px 5px var(--blue-300);
+  box-shadow: -1px -2px 5px 7px var(--blue-200);
   background-color: var(--green-200);
   height: 6.7rem;
   width: 100%;
@@ -62,6 +62,11 @@
 
 .action-select-wrapper {
   margin-top: 4.4rem;
+  gap: 6.7rem;
+}
+
+.action-select-wrapper:last-child {
+  margin-top: 0;
 }
 
 .action-select-sub-wrapper {
@@ -75,7 +80,7 @@
   top: 10%;
 }
 
-.left-top-selection-field {
+.select-field {
   height: 3.3rem;
   width: 17rem;
   padding: 0.8rem;
@@ -86,6 +91,10 @@
   border-radius: 0.6rem;
 }
 
-.left-top-selection-field option {
+.select-field option {
   background-color: white;
+}
+
+.swap-btn {
+  cursor: pointer;
 }
