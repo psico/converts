@@ -92,6 +92,7 @@
 
   outline: none;
   color: var(--blue-300);
+  font-size: 1.6rem;
 }
 
 .select-field option {
@@ -118,4 +119,5 @@
 
   outline: none;
   color: var(--blue-300);
+  font-size: 1.6rem;
 }
