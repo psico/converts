@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   currentDateElement.textContent = `Data: ${currentDate}`;
-  currentDate.datetime = currentDate;
+  currentDateElement.datetime = currentDate;
 });
