@@ -16,4 +16,4 @@
 
 # 🎯 Objetivo 
 
-## ✔️ Fazer um site facíl e prático, que todos possam usar no dia a dia. ☀️
+## ✔️ Fazer um site facíl e prático que todos possam usar no dia a dia. ☀️
