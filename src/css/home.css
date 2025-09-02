@@ -98,3 +98,23 @@
 .swap-btn {
   cursor: pointer;
 }
+
+.currency-value-fields-wrapper {
+  gap: 6.7rem;
+}
+
+.currency-field {
+  border: none;
+  border-radius: 0.6rem;
+
+  padding: 0.8rem;
+  background-color: var(--gray-200);
+
+  width: 17rem;
+  height: 3.3rem;
+
+  outline: none;
+  color: var(--blue-300);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
