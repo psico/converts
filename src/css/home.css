@@ -89,6 +89,9 @@
   border: none;
   background-color: var(--gray-200);
   border-radius: 0.6rem;
+
+  outline: none;
+  color: var(--blue-300);
 }
 
 .select-field option {
@@ -115,5 +118,4 @@
 
   outline: none;
   color: var(--blue-300);
-  font-size: 1.6rem;
 }
