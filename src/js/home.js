@@ -8,4 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   currentDateElement.textContent = `Data: ${currentDate}`;
   currentDateElement.datetime = currentDate;
+
+  function formatCurrencyInsertionField(inputEvent) {
+    const currencyFieldElement = inputEvent.target;
+
+    currencyFieldElement.value = currencyFieldElement.value.replaceAll(
+      /[^\d.,]/g,
+      ""
+    );
+  }
+
+  const currencyInsertionField = document.getElementById(
+    "currency-insertion-field"
+  );
+
+  currencyInsertionField.addEventListener("input", (event) =>
+    formatCurrencyInsertionField(event)
+  );
 });
