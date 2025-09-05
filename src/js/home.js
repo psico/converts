@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!allowedRegex.test(enteredValue) && enteredValue !== "Backspace") {
       keydownEvent.preventDefault();
     }
+
+    if (mainCurrencyInsertionField.value === mainCurrencySelectionField.value) {
+      keydownEvent.preventDefault();
+      mainCurrencyInsertionField.value = mainCurrencySelectionField.value + " ";
+    }
   }
 
   const mainCurrencyInsertionField = document.getElementById(
@@ -35,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     mainCurrencyInsertionField.disabled = true;
   }
 
-  mainCurrencySelectionField.addEventListener("change", (event) => {
-    const currencySimbol = event.target.value;
+  function handleMainCurrencySelectionFieldChange(changeEvent) {
+    const currencySimbol = changeEvent.target.value;
 
     mainCurrencyInsertionField.value = currencySimbol + " ";
 
@@ -46,5 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       mainCurrencyInsertionField.disabled = false;
     }
-  });
+  }
+
+  mainCurrencySelectionField.addEventListener("change", (event) =>
+    handleMainCurrencySelectionFieldChange(event)
+  );
 });
