@@ -9,36 +9,42 @@ document.addEventListener("DOMContentLoaded", () => {
   currentDateElement.textContent = `Data: ${currentDate}`;
   currentDateElement.datetime = currentDate;
 
-  function formatMainCurrencyInsertionField(inputEvent) {
-    const currencyFieldElement = inputEvent.target;
+  function handlePreventInvalidCharacter(keydownEvent) {
+    const allowedRegex = /^(?:[0-9.]*|)$/;
 
-    currencyFieldElement.value = currencyFieldElement.value.replaceAll(
-      /[^\d.,]/g,
-      ""
-    );
+    const enteredValue = keydownEvent.key;
 
-    currencyFieldElement.value = currencyFieldElement.value.replaceAll(
-      mainCurrencySelectionField.value,
-      ""
-    );
-
-    currencyFieldElement.value =
-      mainCurrencySelectionField.value + " " + currencyFieldElement.value;
+    if (!allowedRegex.test(enteredValue) && enteredValue !== "Backspace") {
+      keydownEvent.preventDefault();
+    }
   }
 
   const mainCurrencyInsertionField = document.getElementById(
     "main-currency-insertion-field"
   );
 
-  mainCurrencyInsertionField.addEventListener("input", (event) =>
-    formatMainCurrencyInsertionField(event)
+  mainCurrencyInsertionField.addEventListener("keydown", (event) =>
+    handlePreventInvalidCharacter(event)
   );
 
   const mainCurrencySelectionField = document.getElementById(
     "main-currency-selection-field"
   );
 
+  if (!mainCurrencySelectionField.value) {
+    mainCurrencyInsertionField.disabled = true;
+  }
+
   mainCurrencySelectionField.addEventListener("change", (event) => {
-    mainCurrencyInsertionField.value = event.target.value;
+    const currencySimbol = event.target.value;
+
+    mainCurrencyInsertionField.value = currencySimbol + " ";
+
+    if (!currencySimbol) {
+      mainCurrencyInsertionField.disabled = true;
+      mainCurrencyInsertionField.value = "";
+    } else {
+      mainCurrencyInsertionField.disabled = false;
+    }
   });
 });
