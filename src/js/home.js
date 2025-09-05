@@ -9,20 +9,36 @@ document.addEventListener("DOMContentLoaded", () => {
   currentDateElement.textContent = `Data: ${currentDate}`;
   currentDateElement.datetime = currentDate;
 
-  function formatCurrencyInsertionField(inputEvent) {
+  function formatMainCurrencyInsertionField(inputEvent) {
     const currencyFieldElement = inputEvent.target;
 
     currencyFieldElement.value = currencyFieldElement.value.replaceAll(
       /[^\d.,]/g,
       ""
     );
+
+    currencyFieldElement.value = currencyFieldElement.value.replaceAll(
+      mainCurrencySelectionField.value,
+      ""
+    );
+
+    currencyFieldElement.value =
+      mainCurrencySelectionField.value + " " + currencyFieldElement.value;
   }
 
-  const currencyInsertionField = document.getElementById(
-    "currency-insertion-field"
+  const mainCurrencyInsertionField = document.getElementById(
+    "main-currency-insertion-field"
   );
 
-  currencyInsertionField.addEventListener("input", (event) =>
-    formatCurrencyInsertionField(event)
+  mainCurrencyInsertionField.addEventListener("input", (event) =>
+    formatMainCurrencyInsertionField(event)
   );
+
+  const mainCurrencySelectionField = document.getElementById(
+    "main-currency-selection-field"
+  );
+
+  mainCurrencySelectionField.addEventListener("change", (event) => {
+    mainCurrencyInsertionField.value = event.target.value;
+  });
 });
