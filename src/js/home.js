@@ -1,3 +1,5 @@
+import validateFormField from "./utils/validate-form-field.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const currentDateElement = document.getElementById("current-date-element");
   const currentDate = new Date().toLocaleString("pt-BR", {
@@ -28,12 +30,25 @@ document.addEventListener("DOMContentLoaded", () => {
     "main-currency-insertion-field"
   );
 
-  mainCurrencyInsertionField.addEventListener("keydown", (event) =>
-    handlePreventInvalidCharacter(event)
-  );
+  const errorMessagesList = document.querySelectorAll(".form-error-message");
+
+  mainCurrencyInsertionField.addEventListener("keydown", (event) => {
+    handlePreventInvalidCharacter(event);
+  });
+
+  mainCurrencyInsertionField.addEventListener("input", (event) => {
+    validateFormField(errorMessagesList[2], {
+      formFieldValue: event.currentTarget.value,
+      errorConditions: ["$ ", "$", "R$ ", "R$"],
+    });
+  });
 
   const mainCurrencySelectionField = document.getElementById(
     "main-currency-selection-field"
+  );
+
+  const secondaryCurrencySelectionField = document.getElementById(
+    "secondary-currency-selection-field"
   );
 
   if (!mainCurrencySelectionField.value) {
@@ -53,7 +68,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  mainCurrencySelectionField.addEventListener("change", (event) =>
-    handleMainCurrencySelectionFieldChange(event)
-  );
+  mainCurrencySelectionField.addEventListener("change", (event) => {
+    handleMainCurrencySelectionFieldChange(event);
+
+    validateFormField(errorMessagesList[0], {
+      formFieldValue: mainCurrencySelectionField.value,
+      errorConditions: [""],
+    });
+
+    validateFormField(errorMessagesList[2], {
+      formFieldValue: event.currentTarget.value,
+      errorConditions: ["$ ", "$", "R$ ", "R$"],
+    });
+  });
+
+  secondaryCurrencySelectionField.addEventListener("change", () => {
+    validateFormField(errorMessagesList[1], {
+      formFieldValue: secondaryCurrencySelectionField.value,
+      errorConditions: [""],
+    });
+  });
+
+  function handleValidateConversionForm() {
+    validateFormField(errorMessagesList[0], {
+      formFieldValue: mainCurrencySelectionField.value,
+      errorConditions: [""],
+    });
+
+    validateFormField(errorMessagesList[1], {
+      formFieldValue: secondaryCurrencySelectionField.value,
+      errorConditions: [""],
+    });
+
+    validateFormField(errorMessagesList[2], {
+      formFieldValue: mainCurrencyInsertionField.value,
+      errorConditions: ["$", "$ ", "R$", "R$ ", ""],
+    });
+  }
+
+  const conversionForm = document.getElementById("conversion-form");
+
+  conversionForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    handleValidateConversionForm();
+  });
 });
