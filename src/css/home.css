@@ -71,6 +71,7 @@
 
 .action-select-sub-wrapper {
   position: relative;
+  gap: 0.4rem;
 }
 
 .action-select-sub-wrapper img {
@@ -120,4 +121,34 @@
   outline: none;
   color: var(--blue-300);
   font-size: 1.6rem;
+}
+
+.form-error-message {
+  color: var(--red-100);
+  font-size: 1.2rem;
+  display: none;
+}
+
+.form-error-message-wrapper {
+  margin-left: 0.8rem;
+}
+
+.currency-value-fields-error-message-wrapper {
+  gap: 0.4rem;
+}
+
+.conversion-form-button-wrapper {
+  margin-top: 1.7rem;
+  padding-bottom: 2.7rem;
+}
+
+.conversion-form-button-wrapper button {
+  background-color: var(--green-100);
+  color: white;
+
+  border-radius: 0.6rem;
+
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

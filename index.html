@@ -22,28 +22,40 @@
           <h2 class="currency-conversion-title">Converter Moeda</h2>
         </div>
 
-        <div class="flex flex-col">
+        <form class="flex flex-col">
           <div class="flex justify-center action-select-wrapper flex flex-row">
-            <div class="action-select-sub-wrapper">
-              <img src="./src/assets/icons/play_arrow_filled.svg" />
-              <select
-                name=""
-                class="select-field"
-                id="main-currency-selection-field"
-              >
-                <option value="">Escolha a moeda</option>
-                <option value="R$">Real</option>
-                <option value="$">Dólar</option>
-              </select>
+            <div class="action-select-sub-wrapper flex flex-col">
+              <div class="flex flex-col">
+                <img src="./src/assets/icons/play_arrow_filled.svg" />
+                <select
+                  name=""
+                  class="select-field"
+                  id="main-currency-selection-field"
+                >
+                  <option value="">Escolha a moeda</option>
+                  <option value="R$">Real</option>
+                  <option value="$">Dólar</option>
+                </select>
+              </div>
+
+              <div class="form-error-message-wrapper">
+                <span class="form-error-message">Escolha uma moeda</span>
+              </div>
             </div>
 
-            <div class="action-select-sub-wrapper">
-              <img src="./src/assets/icons/play_arrow_filled.svg" />
-              <select name="" id="" class="select-field">
-                <option value="">Escolha a moeda</option>
-                <option value="">teste</option>
-                <option value="">teste</option>
-              </select>
+            <div class="action-select-sub-wrapper flex flex-col">
+              <div class="flex flex-col">
+                <img src="./src/assets/icons/play_arrow_filled.svg" />
+                <select name="" id="" class="select-field">
+                  <option value="">Escolha a moeda</option>
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+                </select>
+              </div>
+
+              <div class="form-error-message-wrapper">
+                <span class="form-error-message">Escolha uma moeda</span>
+              </div>
             </div>
           </div>
 
@@ -54,20 +66,36 @@
           </div>
 
           <div class="flex justify-center currency-value-fields-wrapper">
-            <div>
+            <div
+              class="flex flex-col currency-value-fields-error-message-wrapper"
+            >
               <input
                 type="text"
                 class="currency-field"
                 id="main-currency-insertion-field"
                 placeholder="Escolha a moeda"
               />
+
+              <div class="form-error-message-wrapper">
+                <span class="form-error-message">Escolha uma moeda</span>
+              </div>
             </div>
 
-            <div>
+            <div
+              class="flex flex-col currency-value-fields-error-message-wrapper"
+            >
               <input type="text" class="currency-field" disabled />
+
+              <div class="form-error-message-wrapper">
+                <span class="form-error-message">Escolha uma moeda</span>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div class="flex justify-center conversion-form-button-wrapper">
+            <button>Converter valor</button>
+          </div>
+        </form>
       </section>
     </main>
 
