@@ -114,3 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     handleValidateConversionForm();
   });
 });
+
+function TrocaValores() {
+  console.log("Oi");
+};
