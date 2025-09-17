@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handlePreventInvalidCharacter(keydownEvent) {
     const allowedRegex = /^(?:[0-9.]*|)$/;
-
     const enteredValue = keydownEvent.key;
 
     if (!allowedRegex.test(enteredValue) && enteredValue !== "Backspace") {
@@ -113,12 +112,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     handleValidateConversionForm();
   });
-});
 
-function TrocaValores() {
-  console.log("Oi");
-};
-
+  
+  function TrocarValores() {
+    console.log("Oi");
+  }
+  
+const swapBtn = document.getElementById("swap-btn");
+if (swapBtn) {
+  swapBtn.addEventListener("click", TrocarValores);
+}
+  
   function dataAtual() {
     const hoje = new Date();
     const dia = String(hoje.getDate()).padStart(2, '0');
@@ -128,4 +132,9 @@ function TrocaValores() {
     document.getElementById("data-atual").innerText = `${dia}/${mes}/${ano}`;
   }
 
-  document.getElementById("data-atual").addEventListener("click", dataAtual);
+ 
+  const dataAtualElement = document.getElementById("data-atual");
+  if (dataAtualElement) {
+    dataAtualElement.addEventListener("click", dataAtual);
+  }
+});
