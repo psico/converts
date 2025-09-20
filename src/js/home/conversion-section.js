@@ -1,6 +1,6 @@
-import validateFormField from "./utils/validate-form-field.js";
+import validateFormField from "../utils/validate-form-field.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+const conversionSection = document.addEventListener("DOMContentLoaded", () => {
   const currentDateElement = document.getElementById("current-date-element");
   const currentDate = new Date().toLocaleString("pt-BR", {
     day: "2-digit",
@@ -113,28 +113,28 @@ document.addEventListener("DOMContentLoaded", () => {
     handleValidateConversionForm();
   });
 
-  
   function TrocarValores() {
     console.log("Oi");
   }
-  
-const swapBtn = document.getElementById("swap-btn");
-if (swapBtn) {
-  swapBtn.addEventListener("click", TrocarValores);
-}
-  
+
+  const swapBtn = document.getElementById("swap-btn");
+  if (swapBtn) {
+    swapBtn.addEventListener("click", TrocarValores);
+  }
+
   function dataAtual() {
     const hoje = new Date();
-    const dia = String(hoje.getDate()).padStart(2, '0');
-    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+    const dia = String(hoje.getDate()).padStart(2, "0");
+    const mes = String(hoje.getMonth() + 1).padStart(2, "0");
     const ano = hoje.getFullYear();
 
     document.getElementById("data-atual").innerText = `${dia}/${mes}/${ano}`;
   }
 
- 
   const dataAtualElement = document.getElementById("data-atual");
   if (dataAtualElement) {
     dataAtualElement.addEventListener("click", dataAtual);
   }
 });
+
+export default conversionSection;
