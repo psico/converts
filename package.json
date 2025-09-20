@@ -4,9 +4,6 @@
   "description": "Projeto web Converts utilizável para converter moedas, acompanhar histórico de conversões, entre outras funcionalidades.",
   "main": "index.html",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/psico/converts.git"

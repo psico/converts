@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/css/global.css" />
     <link rel="stylesheet" href="./src/css/home.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
+      integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/home/index.js" type="module"></script>
     <title>Converts</title>
   </head>
   <body>
@@ -102,8 +108,14 @@
           </div>
         </form>
       </section>
-    </main>
 
-    <script src="./src/js/home/index.js" type="module"></script>
+      <section>
+        <article class="dollar-rate-graph flex justify-center">
+          <div class="canvas-graph-wrapper">
+            <canvas id="canvas-graph" class="canvas-graph"></canvas>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
