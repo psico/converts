@@ -15,13 +15,17 @@ class CurrencyService {
   async getMonthlyDollarRate() {
     const { finalDate, initialDate } = this._getMonthlyDate();
 
-    const request = await fetch(
-      `${this._baseFrankfurterApiUrl}/${initialDate}..${finalDate}?base=USD&symbols=BRL`
-    );
+    try {
+      const request = await fetch(
+        `${this._baseFrankfurterApiUrl}/${initialDate}..${finalDate}?base=USD&symbols=BRL`
+      );
 
-    const response = await request.json();
+      const response = await request.json();
 
-    return response;
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 
