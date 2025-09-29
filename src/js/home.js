@@ -115,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   function TrocarValores() {
-    console.log("Oi");
+console.log ("alo");
+
   }
   
 const swapBtn = document.getElementById("swap-btn");

@@ -1,6 +1,6 @@
 
 
-# 🪙 Converts
+# 🪙 CoinVert
 
 ## Este projeto é um conversor de moedas simples e prático, que permite converter valores entre diferentes moedas em tempo real. Ele utiliza taxas de câmbio atualizadas (API/valores fixos, dependendo da implementação) e oferece uma interface intuitiva para facilitar a utilização.
 
