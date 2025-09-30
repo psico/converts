@@ -134,6 +134,6 @@ function dataAtual() {
   const ano = hoje.getFullYear();
 
   document.getElementById("data-atual").innerText = `${dia}/${mes}/${ano}`;
+  
 }
-
-document.getElementById("data-atual").addEventListener("click", dataAtual);
+window.onload = dataAtual;
