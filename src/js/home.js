@@ -105,6 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function TrocarValores() {
     console.log("alo");
+    let valor1 = document.getElementById("main-currency-insertion-field").value;
+    console.log(valor1);
+    let valor2 = document.getElementById("secondary-currency-insertion-field");
+    valor2.value = valor1;
   }
 
   const swapBtn = document.getElementById("swap-btn");
