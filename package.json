@@ -1,7 +1,7 @@
 {
   "name": "converts",
   "version": "1.0.0",
-  "description": "Projeto web Converts utilizável para converter moedas, acompanhar histórico de conversões, entre outras funcionalidades.",
+  "description": "Projeto web Converts utilizado para converter moedas, acompanhar histórico de conversões entre outras funcionalidades.",
   "main": "index.html",
   "type": "module",
   "repository": {
