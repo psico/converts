@@ -11,6 +11,12 @@
       href="./src/assets/icons/favicon.png"
     />
     <title>Coinvert</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
+      integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./src/js/home/index.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -103,8 +109,14 @@
           </div>
         </form>
       </section>
-    </main>
 
-    <script src="./src/js/home.js" type="module"></script>
+      <section>
+        <article class="dollar-rate-graph flex justify-center">
+          <div class="canvas-graph-wrapper">
+            <canvas id="canvas-graph" class="canvas-graph"></canvas>
+          </div>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

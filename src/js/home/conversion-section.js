@@ -1,4 +1,4 @@
-import validateFormField from "./utils/validate-form-field.js";
+import validateFormField from "../utils/validate-form-field.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   function handlePreventInvalidCharacter(keydownEvent) {
@@ -138,6 +138,5 @@ function dataAtual() {
   const ano = hoje.getFullYear();
 
   document.getElementById("data-atual").innerText = `${dia}/${mes}/${ano}`;
-  
 }
 window.onload = dataAtual;
