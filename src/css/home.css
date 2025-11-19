@@ -162,3 +162,18 @@
 .canvas-graph-wrapper {
   width: 100rem;
 }
+
+#data-atual {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.8rem;
+
+  background-color: var(--blue-100);
+  border-radius: 0.6rem;
+
+  padding: 7px 12px;
+
+  color: var(--blue-300);
+  font-weight: 500;
+  font-size: 20px;
+}
