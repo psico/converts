@@ -101,14 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     handleValidateConversionForm();
+
+    console.log("Validando formulário... ", errorMessagesList);
+    // @TODO complementar para começar a validar se tem erro ou não, se não tiver, fazer a cotação
+    /*if (errorMessagesList.every((errorMessage) => errorMessage.style.display === "none")) {
+      //podeFazerACotacao
+      console.log("Pode fazer a cotação!");
+    } */
   });
 
   function TrocarValores() {
-    console.log("alo");
-    let valor1 = document.getElementById("main-currency-insertion-field").value;
-    console.log(valor1);
-    let valor2 = document.getElementById("secondary-currency-insertion-field");
-    valor2.value = valor1;
+    let valorDaEsquerda = document.getElementById("main-currency-insertion-field").value;
+
+    let elementoDaDireita = document.getElementById("secondary-currency-insertion-field");
+    elementoDaDireita.value = Number(valorDaEsquerda.split(" ")[1]) * 3;
   }
 
   const swapBtn = document.getElementById("swap-btn");
