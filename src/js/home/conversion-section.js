@@ -101,14 +101,20 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     handleValidateConversionForm();
+
+    //@TODO fazer validação se não tem erro para em seguida fazer a conversao
+    /*
+      if (se não tem erros) {
+        // fazer a conversao
+      }
+    */
   });
 
   function TrocarValores() {
-    console.log("alo");
-    let valor1 = document.getElementById("main-currency-insertion-field").value;
-    console.log(valor1);
-    let valor2 = document.getElementById("secondary-currency-insertion-field");
-    valor2.value = valor1;
+    let inputEsquerdoValorParaConversao = document.getElementById("main-currency-insertion-field").value;
+
+    let inputDireitoDaConversao = document.getElementById("secondary-currency-insertion-field");
+    inputDireitoDaConversao.value = Number(inputEsquerdoValorParaConversao.value.split(" ")[1]);
   }
 
   const swapBtn = document.getElementById("swap-btn");
