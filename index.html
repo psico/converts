@@ -35,24 +35,20 @@
             <div class="action-select-sub-wrapper flex flex-col">
               <div class="flex flex-col">
                 <img src="./src/assets/icons/play_arrow_filled.svg" />
-                <select
-                  name=""
-                  class="select-field"
-                  id="main-currency-selection-field"
-                >
-                  <option value="">Escolha a moeda</option>
-                  <option value="USD">
-                  <img src="./usaflag.png" alt="us"> Dólar Americano</option>
-                  <option value="R$">Real</option>
-                  <option value="¥">Iene Japonês</option>
-                  <option value="¥">Yuan Chinês (Renminbi)</option>
-                  <option value="£">Libra Esterlina</option>
-                  <option value="$">Dólar Canadense</option>
-                  <option value="AU$">Dólar Australiano</option>
-                  <option value="₣">Franco Suíço</option>
-                  <option value="HK$">Dólar de Hong Kong</option>
-                  <option value="S$">Dólar de Singapura</option>
-                </select>
+                  <select id="main-currency-selection-field" class="select-field">
+                    <option value="">Escolha a moeda</option>
+                    <option value="USD" data-flag="https://flagcdn.com/us.svg">Dólar Americano</option>
+                    <option value="BRL" data-flag="https://flagcdn.com/br.svg">Real Brasileiro</option>
+                    <option value="JPY" data-flag="https://flagcdn.com/jp.svg">Iene Japonês</option>
+                    <option value="CNY" data-flag="https://flagcdn.com/cn.svg">Yuan Chinês (Renminbi)</option>
+                    <option value="GBP" data-flag="https://flagcdn.com/gb.svg">Libra Esterlina</option>
+                    <option value="CAD" data-flag="https://flagcdn.com/ca.svg">Dólar Canadense</option>
+                    <option value="AUD" data-flag="https://flagcdn.com/au.svg">Dólar Australiano</option>
+                    <option value="CHF" data-flag="https://flagcdn.com/ch.svg">Franco Suíço</option>
+                    <option value="HKD" data-flag="https://flagcdn.com/hk.svg">Dólar de Hong Kong</option>
+                    <option value="SGD" data-flag="https://flagcdn.com/sg.svg">Dólar de Singapura</option>
+                  </select>
+                  <img id="main-flag" src="" alt="" class="flag-img" style="display:none">
               </div>
 
               <div class="form-error-message-wrapper">
@@ -63,24 +59,20 @@
             <div class="action-select-sub-wrapper flex flex-col">
               <div class="flex flex-col">
                 <img src="./src/assets/icons/play_arrow_filled.svg" />
-                <select
-                  name=""
-                  id="secondary-currency-selection-field"
-                  class="select-field"
-                >
+                <select id="secondary-currency-selection-field" class="select-field">
                   <option value="">Escolha a moeda</option>
-                  <option value="USD">Dólar Americano</option>
-                  <option value="R$">Real</option>
-                  <option value="¥">Iene Japonês</option>
-                  <option value="¥">Yuan Chinês (Renminbi)</option>
-                  <option value="£">Libra Esterlina</option>
-                  <option value="$">Dólar Canadense</option>
-                  <option value="AU$">Dólar Australiano</option>
-                  <option value="₣">Franco Suíço</option>
-                  <option value="HK$">Dólar de Hong Kong</option>
-                  <option value="S$">Dólar de Singapura</option>
-                 
+                  <option value="USD" data-flag="https://flagcdn.com/us.svg">Dólar Americano</option>
+                  <option value="BRL" data-flag="https://flagcdn.com/br.svg">Real Brasileiro</option>
+                  <option value="JPY" data-flag="https://flagcdn.com/jp.svg">Iene Japonês</option>
+                  <option value="CNY" data-flag="https://flagcdn.com/cn.svg">Yuan Chinês (Renminbi)</option>
+                  <option value="GBP" data-flag="https://flagcdn.com/gb.svg">Libra Esterlina</option>
+                  <option value="CAD" data-flag="https://flagcdn.com/ca.svg">Dólar Canadense</option>
+                  <option value="AUD" data-flag="https://flagcdn.com/au.svg">Dólar Australiano</option>
+                  <option value="CHF" data-flag="https://flagcdn.com/ch.svg">Franco Suíço</option>
+                  <option value="HKD" data-flag="https://flagcdn.com/hk.svg">Dólar de Hong Kong</option>
+                  <option value="SGD" data-flag="https://flagcdn.com/sg.svg">Dólar de Singapura</option>
                 </select>
+                <img id="secondary-flag" src="" alt="" class="flag-img" style="display:none">
               </div>
 
               <div class="form-error-message-wrapper">
