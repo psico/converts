@@ -44,3 +44,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   })();
 });
+
+
+function bindFlagToSelect(selectId, imgId) {
+  const select = document.getElementById(selectId);
+  const img = document.getElementById(imgId);
+  if (!select || !img) return;
+
+  function updateFlag() {
+    const opt = select.options[select.selectedIndex];
+    const flagUrl = opt?.dataset?.flag || "";
+    if (flagUrl) {
+      img.src = flagUrl;
+      img.style.display = "inline-block";
+      img.alt = opt.textContent.trim();
+    } else {
+      img.src = "";
+      img.style.display = "none";
+      img.alt = "";
+    }
+  }
+  select.addEventListener("change", updateFlag);
+    updateFlag();
+}
+document.addEventListener("DOMContentLoaded", () => {
+bindFlagToSelect("main-currency-selection-field", "main-flag");
+bindFlagToSelect("secondary-currency-selection-field", "secondary-flag");
+}); 
